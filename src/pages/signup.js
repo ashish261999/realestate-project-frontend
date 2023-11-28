@@ -8,9 +8,7 @@ const Signup = () => {
    const navigate = useNavigate();
 
   const handlechange= (e)=>{
-    
     setFormData({
-      
       ...formData ,
       [e.target.id]: e.target.value
   });
@@ -87,6 +85,7 @@ const Signup = () => {
           <span className="text-blue-700">Sign in </span>
         </Link>
       </div>
+      {error && <p className="text-red-500 mt-5">{error}</p>}
     </div>
   );
 };
